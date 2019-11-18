@@ -1,4 +1,4 @@
-﻿(function(factory) {
+(function(factory) {
     /* global define */
     if (typeof define === 'function' && define.amd) {
         // AMD. Register as an anonymous module.
@@ -54,7 +54,8 @@
         // Create a map button to be used in the toolbar
         context.memo('button.map', function() {
             var button = ui.button({
-                contents: "<i class='fa fa-map-o'/>",
+                contents: "<i style='font-size:16px!important' class='fa fa-map'/>",
+                container: 'body',
                 tooltip: lang.mapButton.tooltip,
                 click: function(e) {
                     self.show();
@@ -247,6 +248,17 @@
                     label: "Place name or Address",
                     placeholder: "e.g. Eiffel Tower",
                     button: "Insert Map"
+                }
+            },
+            'nl-NL': {
+                mapButton: {
+                    tooltip: "Kaart"
+                },
+                mapDialog: {
+                    title: "Voeg kaart toe",
+                    label: "Locatie of adres",
+                    placeholder: "o.a. Wergea",
+                    button: "Voeg kaart toe"
                 }
             },
             'th-TH': {
